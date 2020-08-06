@@ -4,6 +4,7 @@
     font-family: 'Source Sans Pro', sans-serif; 
     font-family: 'Ubuntu', sans-serif;
 */
+
 /* Colores */
 /*
     Negro - #000000
@@ -12,11 +13,13 @@
     MostC - #E0C482
     Amar - #FFB500
 */
+
 /* Neutralidad */
 *{
     margin: 0px;
     padding: 0px;
 }
+
 /* General */
 body{
     background-color: #FAFAFA;
@@ -35,6 +38,7 @@ h2{
     width: 90%;
     margin: 0 auto;
 }
+
 /* Formularios */
 form{
     font-family: 'Source Sans Pro', sans-serif;
@@ -74,6 +78,7 @@ input{
     color: red;
     text-align: center;
 }
+
 /* I-Login */
 #login-box{
     width: 40%;

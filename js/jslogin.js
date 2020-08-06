@@ -3,7 +3,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: 'php/insertar.php',
+            url: 'php/cont-login.php',
             data: $(this).serialize(),
             success: function(response)
             {
@@ -15,7 +15,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: 'php/cargaprop.php',
+            url: 'php/cont-reg.php',
             data: $(this).serialize(),
             success: function(response)
             {
