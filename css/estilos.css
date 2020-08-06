@@ -25,6 +25,16 @@ img{
     width: 100%;
     height: auto;
 }
+h2{
+    font-size: 32px;
+    color: #FFB500;
+    display: block;
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 10px 10px;
+    width: 90%;
+    margin: 0 auto;
+}
 /* Formularios */
 form{
     font-family: 'Source Sans Pro', sans-serif;
@@ -32,6 +42,7 @@ form{
 label{
     padding:5px 10px 5px 10px;
     width: 80%;
+    font-size: 20px;
     margin: 0 auto;
     display: block;
 }
@@ -61,7 +72,7 @@ input{
     margin: 0 auto;
     border: 3px solid #FFB500;
     padding:20px 10px;
-    margin-top: 12%;
+    margin-top: 10%;
     border-radius: 15px;
     background-color: white;
 }
