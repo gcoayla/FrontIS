@@ -1,0 +1,74 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700&family=Ubuntu:wght@300;400;700&display=swap');
+/*
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-family: 'Ubuntu', sans-serif;
+*/
+/* Colores */
+/*
+    Negro - #000000
+    Gris - #DFDFDF
+    MostO - #C9B074
+    MostC - #E0C482
+    Amar - #FFB500
+*/
+/* Neutralidad */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* General */
+body{
+    background-color: #FAFAFA;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/* Formularios */
+form{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+label{
+    padding:5px 10px 5px 10px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+input{
+    width: 80%;
+    height: 25px;
+    display: block;
+    font-size: 20px;
+    margin:10px auto;
+    border:1px solid #C9B074;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    -webkit-box-shadow: 6px 6px 6px 1px rgba(0,0,0,0.12);
+    -moz-box-shadow: 6px 6px 6px 1px rgba(0,0,0,0.12);
+    box-shadow: 6px 6px 6px 1px rgba(0,0,0,0.12);
+}
+.bt-enviar{
+    color: #FFB500;
+    font-weight: 700;
+    height: 30px;
+    margin:15px auto;
+}
+/* I-Login */
+#login-box{
+    width: 40%;
+    margin: 0 auto;
+    border: 3px solid #FFB500;
+    padding:20px 10px;
+    margin-top: 12%;
+    border-radius: 15px;
+    background-color: white;
+}
+#login-logo{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Header */
+
