@@ -19,7 +19,7 @@ $(document).ready(function() {
             data: $(this).serialize(),
             success: function(response)
             {
-                $("#horario").html(response);
+                $("#caja-alerta").html(response);
                 ejecutar(); 
            }
        });
