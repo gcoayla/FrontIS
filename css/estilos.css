@@ -66,6 +66,13 @@ input{
     height: 30px;
     margin:15px auto;
 }
+.caja-alerta{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 10px;
+    color: red;
+    text-align: center;
+}
 /* I-Login */
 #login-box{
     width: 40%;
