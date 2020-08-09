@@ -64,6 +64,13 @@ h5{/* Info importante blanco*/
     font-size: 20px;
     text-align: center;
 }
+h6{/* Titulo secundario */
+    color: #5E5E5E;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1em;
+}
 p{
     color: #5E5E5E;
     font-family: 'Source Sans Pro', sans-serif;
@@ -246,6 +253,28 @@ li:not(:last-child) {
     padding-top:100%;
   float: left;
 }
+.descr-adop{
+    height: 4em;
+    float: left;
+    width: 80%;
+    padding: 5px 10%;
+}
+.btn-adoptar{
+    width: 80%;
+    height: 1.2em;
+    background-color: #FFB500;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px 5%;
+    margin: 0 5%;
+    border-radius: 5px;
+    font-weight: 400;
+    float: left;
+}
+.btn-adoptar:hover{
+    cursor: pointer;
+}
 /* Avisos */
 #avisos{
     width: 25%;
@@ -264,6 +293,33 @@ li:not(:last-child) {
     overflow: hidden;
     float: left;
     background-color: white;
+    overflow: scroll;
+    height: 60vh;
+}
+.aviso-box::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.aviso-box::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.aviso-box::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.aviso-box::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.aviso-box::-webkit-scrollbar-thumb {
+    background-color: #FFB500;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.aviso-box::-webkit-scrollbar-track {
+    border-radius: 10px;  
 }
 .aviso-foto{
     font-family: sans-serif;
@@ -280,6 +336,48 @@ li:not(:last-child) {
     display:block;
     padding-top:100%;
     float: left;
+}
+.tit-avis{
+    height: 2em;
+    float: left;
+    width: 80%;
+    padding: 5px 10%;
+}
+.descr-avis{
+    height: 3em;
+    float: left;
+    width: 80%;
+    padding: 5px 10%;
+}
+.comentario{
+    width: 90%;
+    padding: 3px 0;
+    margin: 3px 5%;
+    border-bottom: 1px solid #5E5E5E;
+    border-top: 1px solid #5E5E5E;
+    border-radius: 10px;
+}
+.form-coment .coment-form{
+    width: 60%;
+    height: 20px;
+    font-size: 16px;
+    margin:10px 5%;
+    float: left;
+}
+.form-coment .coment-sub{
+    width: 25%;
+    font-size: 16px;
+    margin: 10px 2%;
+    display: block;
+    float: left;
+}
+/* Formulario avisos*/
+#formulario-avisos{
+    width: 27%;
+    margin:0px 1% 0px 1px;
+    float: left;
+    padding-top: 10px;
+    overflow: hidden;   
 }
 /* Footer */
 footer{

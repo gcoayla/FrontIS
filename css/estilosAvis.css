@@ -1,0 +1,13 @@
+#avisos{
+    width: 60%;
+    margin: 0 5%;
+}
+.aviso-box{
+    width: 29.3%;
+    margin: 10px 1%;
+    padding: 1%;
+    height: 50vh;
+}
+.descr-avis{
+    height: 4em;
+}
