@@ -1,0 +1,32 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700&family=Ubuntu:wght@300;400;700&display=swap');
+/*
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-family: 'Ubuntu', sans-serif;
+*/
+
+/* Colores */
+/*
+    Negro - #000000
+    Gris - #DFDFDF
+    GrisOs - #5E5E5E
+    GrisOS2 - #262626
+    MostO - #C9B074
+    MostC - #E0C482
+    Amar - #FFB500
+*/
+
+/* Neutralidad */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* General */
+body{
+    background-color: #FAFAFA;
+}
+img{
+    width: 100%;
+    height: auto;
+}

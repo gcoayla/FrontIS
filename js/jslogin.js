@@ -3,7 +3,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: 'php/cont-login.php',
+            url: 'php/controller/cont-login.php',
             data: $(this).serialize(),
             success: function(response)
             {
@@ -15,12 +15,12 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: 'php/cont-reg.php',
+            url: 'php/controller/cont-reg.php',
             data: $(this).serialize(),
             success: function(response)
             {
                 $("#caja-alerta").html(response);
-                ejecutar(); 
+                alert("Exito");
            }
        });
      });

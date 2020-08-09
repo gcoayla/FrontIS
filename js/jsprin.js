@@ -4,7 +4,7 @@ function solicitar(codigo) {
             };
             $.ajax({
                     data:  parametros,
-                    url:   'php/solicitar.php', 
+                    url:   'php/controller/solicitar.php', 
                     type:  'post',
                     success:  function (response) {
                             alert(response);
@@ -14,7 +14,7 @@ function solicitar(codigo) {
 $(document).ready(function() {
     $.ajax({
             type: "POST",
-            url: 'php/carga-avisos.php',
+            url: 'php/controller/carga-avisos.php',
             data: $(this).serialize(),
             success: function(response)
             {
@@ -23,7 +23,7 @@ $(document).ready(function() {
        });
     $.ajax({
             type: "POST",
-            url: 'php/carga-pub.php',
+            url: 'php/controller/carga-pub.php',
             data: $(this).serialize(),
             success: function(response)
             {
@@ -34,7 +34,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: 'php/pub-avis.php',
+            url: 'php/controller/pub-avis.php',
             data: $(this).serialize(),
             success: function(response)
             {
@@ -46,7 +46,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: 'php/coment-avis.php',
+            url: 'php/controller/coment-avis.php',
             data: $(this).serialize(),
             success: function(response)
             {
