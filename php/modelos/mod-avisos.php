@@ -1,5 +1,5 @@
 <?php
-    //include 'conec.php';
+    include 'conec.php';
     class avisos_model{
         private $titulo;
         private $mensaje;
@@ -9,7 +9,8 @@
             $activo = '0';
         }
         public function insert_aviso(){
-            $mysqli = new mysqli("localhost","root","","aqpetdb");
+            $mysqli = new conectar();
+            $mysqli = $mysqli->conexion();
             date_default_timezone_set('America/Bogota');
             $hoy = date("Y-m-d");
             $query = "INSERT INTO avisos (titulo, mensaje, imagen1, activo, fechacreacion)
@@ -20,7 +21,8 @@
             }
         }
         public function insert_comentario(){
-            $mysqli = new mysqli("localhost","root","","aqpetdb");
+            $mysqli = new conectar();
+            $mysqli = $mysqli->conexion();
             date_default_timezone_set('America/Bogota');
             $hoy = date("Y-m-d");
             $query = "INSERT INTO comentariosaviso (comentario, tsfechacreacion)
@@ -31,7 +33,8 @@
             }
         }
         public function get_aviso(){
-            $mysqli = new mysqli("localhost","root","","aqpetdb");
+            $mysqli = new conectar();
+            $mysqli = $mysqli->conexion();
             $query = "SELECT * FROM avisos WHERE activo=1;";
             $res = $mysqli->query($query);
             if($res === FALSE){
