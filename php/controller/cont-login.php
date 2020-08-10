@@ -1,6 +1,5 @@
 <?php
     include '../modelos/usuario.php';
-    //echo "raaa";
     $correo = $_POST["usuario"];
     $password = $_POST["contrasenia"];
     $temp_user = new usuario($correo);
