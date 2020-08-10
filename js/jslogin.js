@@ -8,6 +8,16 @@ $(document).ready(function() {
             success: function(response)
             {
                 $("#caja-alerta").html(response);
+                if($("#datos").attr("exito")==1){
+                    document.cookie = "idsesion="+$("#datos").attr("codigo");
+                   if($("#datos").attr("tipou")==0){
+                        $(location).attr('href','index.html');
+                    }else{
+                        $(location).attr('href','admin.html');
+                    }
+                }else{
+                    
+                }
            }
        });
      });

@@ -3,6 +3,12 @@
     $correo = $_POST["correo"];
     $password = $_POST["contrasenia"];
     $temp = new usuario($correo);
-    usuario.login_db($password);
-    echo "gaaa";
+
+    $res = $temp -> reg_verifi($correo);
+    if($res == 0){
+        $res1 = $temp->insert_db($correo,$password);
+        echo "Registro exitoso";
+    }else{
+        echo "Correo existente";
+    }
 ?>

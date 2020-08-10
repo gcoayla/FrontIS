@@ -14,7 +14,7 @@ function solicitar(codigo) {
 $(document).ready(function() {
     $.ajax({
             type: "POST",
-            url: 'php/controller/carga-avisos.php',
+            url: 'php/controller/cont-avisos.php',
             data: $(this).serialize(),
             success: function(response)
             {
@@ -23,7 +23,7 @@ $(document).ready(function() {
        });
     $.ajax({
             type: "POST",
-            url: 'php/controller/carga-pub.php',
+            url: 'php/controller/cont-adop.php',
             data: $(this).serialize(),
             success: function(response)
             {
