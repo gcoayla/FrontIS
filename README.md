@@ -158,3 +158,8 @@ class usuario {
 2. Open-Closed : Nuestras clases pueden aceptar nuevas funcionalidades pero las ya existentes no se pueden modificar.
 
 3. Interface Segregation : Nuestras clases contienen las funciones necesarias para cumplir plenamente sus roles para los que fueron diseñadas. 
+
+## Domain-Driven Design
+
+3. Objetos de Valor  
+4. Servicios
