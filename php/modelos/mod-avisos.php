@@ -13,7 +13,7 @@
             $mysqli = $mysqli->conexion();
             date_default_timezone_set('America/Bogota');
             $hoy = date("Y-m-d");
-            $query = "INSERT INTO avisos (titulo, mensaje, imagen1, activo, fechacreacion)
+            $query = "INSERT INTO avisos (titulo, mensaje, imagen1, activo, fecha_creacion)
             VALUES ('".$titulo."','".$mensaje."','".$imagen1."', 0, '".$hoy."');";
             $res = $mysqli->query($query);
             if($res === FALSE){
@@ -25,7 +25,7 @@
             $mysqli = $mysqli->conexion();
             date_default_timezone_set('America/Bogota');
             $hoy = date("Y-m-d");
-            $query = "INSERT INTO comentariosaviso (comentario, tsfechacreacion)
+            $query = "INSERT INTO comentarios_aviso (comentario, ts_fecha_creacion)
             VALUES ('".$comentario."','".$hoy."');";
             $res = $mysqli->query($query);
             if($res === FALSE){
@@ -45,7 +45,7 @@
         }
         public function get_comentario($idaviso){
             $mysqli = new mysqli("localhost","root","","aqpetdb");
-            $query = "SELECT * FROM comentariosaviso WHERE idavisoc=".$idaviso.";";
+            $query = "SELECT * FROM comentarios_aviso WHERE id_avisoc=".$idaviso.";";
             $res = $mysqli->query($query);
             if($res === FALSE){
                 echo "Error: ".$mysqli->error;

@@ -5,7 +5,7 @@
     $res = $temp ->get_aviso();
     if($res->num_rows>0){
         while ($row = $res->fetch_assoc()){
-            $idaviso = $row['idaviso'];
+            $idaviso = $row['id_aviso'];
             $titulo = $row ['titulo'];
             $mensaje = $row['mensaje'];
             $imagen = $row['imagen1'];
