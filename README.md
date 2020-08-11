@@ -161,9 +161,17 @@ class usuario {
 
 ## Domain-Driven Design
 1. Lenguaje ubicuo: 
-    En la calse usuarios tenemos:
+    En la clase usuario tenemos:
     - get_from_db($correo,$clave) nos devuelve los datos almacenados en la tabla usuarios.
-    - 
+    - reg_verifi($correo) verifica si el dato enviado a la variable $correo existe en la base de datos.
+    - insert_db($correo,$clave) ingresa los datos ingresados en las variables a la base de datos.
+    En la clase avisos_model tenemos:
+    - insert_aviso() ingresamos los datos a la tabla aviso dentro de la base de datos.
+    - insert_comentario() ingresamos los datos a la tabla comentario_avisos en la base de datos.
+    - get_aviso() nos devuelve los datos almacenados en la tabla avisos.
+    - get_comentario($idaviso) nos devuelve el comentario almacenado en la tabla comentario_avisos, siempre que el dato enviado sea igual al id de la tabla avisos.
+    En la clase adopcion_model tenemos:
+    - get_adopciones_activas() no devuelve la informacion de las adopciones almacenada en la tabla adopciones que se encuentren activas.
 2. Capas de la Arquitectura
 3. Objetos de Valor  
 4. Servicios
