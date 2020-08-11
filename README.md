@@ -171,7 +171,11 @@ class usuario {
     - get_aviso() nos devuelve los datos almacenados en la tabla avisos.
     - get_comentario($idaviso) nos devuelve el comentario almacenado en la tabla comentarios_aviso, siempre que el dato enviado sea igual al id de la tabla avisos.
     En la clase adopcion_model tenemos:
-    - get_adopciones_activas() no devuelve la informacion de las adopciones almacenada en la tabla adopciones que se encuentren activas.
+    - get_adopciones_activas() no devuelve la informacion de las adopciones almacenada en la tabla en_adopcion que se encuentren activas.
 2. Capas de la Arquitectura
+    -Interface de usuario: Son los archivos almacenados con la extencion .html, estas son todas las vistas de la pagina web.
+    -Aplicación: Son los archivos con extencion .php almacenados en la carpeta controller.
+    -Dominio: Son los archivos con extencion .php almacenados en la carpeta model, contienen las clases con sus respectivas funciones.
+    -Infraestructura: Es la conexion de las vistas y controladores por medio de ajax.
 3. Objetos de Valor  
 4. Servicios
