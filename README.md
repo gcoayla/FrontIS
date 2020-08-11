@@ -160,7 +160,10 @@ class usuario {
 3. Interface Segregation : Nuestras clases contienen las funciones necesarias para cumplir plenamente sus roles para los que fueron diseñadas. 
 
 ## Domain-Driven Design
-1. Lenguaje ubicuo
+1. Lenguaje ubicuo: 
+    En la calse usuarios tenemos:
+    - get_from_db($correo,$clave) nos devuelve los datos almacenados en la tabla usuarios.
+    - 
 2. Capas de la Arquitectura
 3. Objetos de Valor  
 4. Servicios
