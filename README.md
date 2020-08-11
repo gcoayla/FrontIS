@@ -161,21 +161,30 @@ class usuario {
 
 ## Domain-Driven Design
 1. Lenguaje ubicuo: 
+
 En la clase usuario tenemos:
-- get_from_db($correo,$clave) nos devuelve los datos almacenados en la tabla usuarios.
-- reg_verifi($correo) verifica si el dato enviado a la variable $correo existe en la base de datos.
-- insert_db($correo,$clave) ingresa los datos ingresados en las variables a la base de datos.
+- `get_from_db($correo,$clave)` nos devuelve los datos almacenados en la tabla usuarios.
+- `reg_verifi($correo)` verifica si el dato enviado a la variable $correo existe en la base de datos.
+- `insert_db($correo,$clave)` ingresa los datos ingresados en las variables a la base de datos.
+
 En la clase avisos_model tenemos:
-- insert_aviso() ingresamos los datos a la tabla avisos dentro de la base de datos.
-- insert_comentario() ingresamos los datos a la tabla comentarios_aviso en la base de datos.
-- get_aviso() nos devuelve los datos almacenados en la tabla avisos.
-- get_comentario($idaviso) nos devuelve el comentario almacenado en la tabla comentarios_aviso, siempre que el dato enviado sea igual al id de la tabla avisos.
+- `insert_aviso()` ingresamos los datos a la tabla avisos dentro de la base de datos.
+- `insert_comentario()` ingresamos los datos a la tabla comentarios_aviso en la base de datos.
+- `get_aviso()` nos devuelve los datos almacenados en la tabla avisos.
+- `get_comentario($idaviso)` nos devuelve el comentario almacenado en la tabla comentarios_aviso, siempre que el dato enviado sea igual al id de la tabla avisos.
+
 En la clase adopcion_model tenemos:
-- get_adopciones_activas() no devuelve la informacion de las adopciones almacenada en la tabla en_adopcion que se encuentren activas.
+- `get_adopciones_activas()` no devuelve la informacion de las adopciones almacenada en la tabla en_adopcion que se encuentren activas.
+
 2. Capas de la Arquitectura
+
     -Interface de usuario: Son los archivos almacenados con la extencion .html, estas son todas las vistas de la pagina web.
+    
     -Aplicación: Son los archivos con extencion .php almacenados en la carpeta controller.
+    
     -Dominio: Son los archivos con extencion .php almacenados en la carpeta model, contienen las clases con sus respectivas funciones.
+    
     -Infraestructura: Es la conexion de las vistas y controladores por medio de ajax.
+    
 3. Objetos de Valor  
 4. Servicios
