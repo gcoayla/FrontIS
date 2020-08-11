@@ -6,7 +6,7 @@
 		private $password="";
 
 		public function conexion(){
-			$mycon = new mysqli($servidor,$usuario,$password,$bd);
+			$mycon = new mysqli($this->servidor,$this->usuario,$this->password,$this->bd);
 			return $mycon;
 		}
 	}	
