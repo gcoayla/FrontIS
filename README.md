@@ -160,6 +160,7 @@ class usuario {
 3. Interface Segregation : Nuestras clases contienen las funciones necesarias para cumplir plenamente sus roles para los que fueron diseñadas. 
 
 ## Domain-Driven Design
-
+1. Lenguaje ubicuo
+2. Capas de la Arquitectura
 3. Objetos de Valor  
 4. Servicios
