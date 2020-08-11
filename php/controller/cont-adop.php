@@ -5,7 +5,6 @@ $res = $modelo->get_adopciones_activas();
 
 echo('<h2>Adopta un compañero</h2>');
 if($res->num_rows>0){
-    
     while($row = $res->fetch_assoc()){
     echo('<div class="adopcion-box">
         <div class="adopcion-foto">
