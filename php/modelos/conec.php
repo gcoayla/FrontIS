@@ -2,11 +2,11 @@
 	class conectar{
 		private $servidor="localhost";
 		private $usuario="root";
-		private $bd="crudpoo";
+		private $bd="aqpetdb";
 		private $password="";
 
 		public function conexion(){
-			$mycon = new mysqli("localhost","root","","aqpetdb");
+			$mycon = new mysqli($servidor,$usuario,$password,$bd);
 			return $mycon;
 		}
 	}	
