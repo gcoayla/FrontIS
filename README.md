@@ -176,7 +176,7 @@ En la clase avisos_model tenemos:
 En la clase adopcion_model tenemos:
 - `get_adopciones_activas()` no devuelve la informacion de las adopciones almacenada en la tabla en_adopcion que se encuentren activas.
 
-2. Capas de la Arquitectura
+2. Capas de la Arquitectura:
 
     -Interface de usuario: Son los archivos almacenados con la extencion .html, estas son todas las vistas de la pagina web.
     
