@@ -31,52 +31,52 @@ USE `aqpetdb`;
 --
 
 CREATE TABLE `avisos` (
-  `idaviso` int(11) NOT NULL,
-  `idcreador` int(11) NOT NULL,
+  `id_aviso` int(11) NOT NULL,
+  `id_creador` int(11) NOT NULL,
   `titulo` varchar(100) NOT NULL,
   `mensaje` varchar(200) NOT NULL,
   `imagen1` varchar(40) NOT NULL DEFAULT '-',
   `imagen2` varchar(40) NOT NULL DEFAULT '-',
   `activo` tinyint(1) NOT NULL DEFAULT 0,
-  `fechacreacion` date NOT NULL
+  `fecha_creacion` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `comentariosadopcion`
+-- Estructura de tabla para la tabla `comentarios_adopcion`
 --
 
-CREATE TABLE `comentariosadopcion` (
-  `idcometarioadopcion` int(11) NOT NULL,
-  `idusuarioa` int(11) NOT NULL,
-  `idadopciona` int(11) NOT NULL,
+CREATE TABLE `comentarios_adopcion` (
+  `id_cometario_adopcion` int(11) NOT NULL,
+  `id_usuarioa` int(11) NOT NULL,
+  `id_adopciona` int(11) NOT NULL,
   `comentario` varchar(200) NOT NULL,
-  `tsfechacreacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `ts_fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `comentariosaviso`
+-- Estructura de tabla para la tabla `comentarios_aviso`
 --
 
-CREATE TABLE `comentariosaviso` (
-  `idcomentarioaviso` int(11) NOT NULL,
-  `idavisoc` int(11) NOT NULL,
-  `idusuario` int(11) NOT NULL,
+CREATE TABLE `comentarios_aviso` (
+  `id_comentario_aviso` int(11) NOT NULL,
+  `id_avisoc` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
   `comentario` varchar(200) NOT NULL,
-  `tsfechacreacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `ts_fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `datosusuario`
+-- Estructura de tabla para la tabla `datos_usuario`
 --
 
-CREATE TABLE `datosusuario` (
-  `iddatousuario` int(11) NOT NULL,
+CREATE TABLE `datos_usuario` (
+  `id_dato_usuario` int(11) NOT NULL,
   `nombres` varchar(100) NOT NULL,
   `apellidos` varchar(100) NOT NULL,
   `direccion` varchar(100) NOT NULL,
@@ -89,16 +89,15 @@ CREATE TABLE `datosusuario` (
 -- Estructura de tabla para la tabla `enadopcion`
 --
 
-CREATE TABLE `enadopcion` (
-  `idenadopcion` int(11) NOT NULL,
-  `idcreador` int(11) NOT NULL,
+CREATE TABLE `en_adopcion` (
+  `id_en_adopcion` int(11) NOT NULL,
+  `id_creador` int(11) NOT NULL,
   `descripcion` varchar(200) NOT NULL,
   `imagen1` varchar(30) NOT NULL DEFAULT '-',
   `imagen2` varchar(30) NOT NULL DEFAULT '-',
   `imagen3` varchar(30) NOT NULL DEFAULT '-',
-  `fechacreacion` date NOT NULL,
-  `activo` tinyint(1) NOT NULL DEFAULT 1,
-  `vigente` tinyint(1) NOT NULL DEFAULT 1
+  `fecha_creacion` date NOT NULL,
+  `activo` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -107,10 +106,10 @@ CREATE TABLE `enadopcion` (
 -- Estructura de tabla para la tabla `solicitudadopcion`
 --
 
-CREATE TABLE `solicitudadopcion` (
-  `idadoptar` int(11) NOT NULL,
-  `idsolicitante` int(11) NOT NULL,
-  `fechasolicitud` date NOT NULL
+CREATE TABLE `solicitud_adopcion` (
+  `id_adoptar` int(11) NOT NULL,
+  `id_solicitante` int(11) NOT NULL,
+  `fecha_solicitud` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -120,11 +119,11 @@ CREATE TABLE `solicitudadopcion` (
 --
 
 CREATE TABLE `usuarios` (
-  `idusuario` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
   `correo` varchar(50) NOT NULL,
   `clave` varchar(100) NOT NULL,
-  `fechacreacion` date NOT NULL,
-  `tipousuario` tinyint(1) NOT NULL DEFAULT 0
+  `fecha_creacion` date NOT NULL,
+  `tipo_usuario` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -135,52 +134,52 @@ CREATE TABLE `usuarios` (
 -- Indices de la tabla `avisos`
 --
 ALTER TABLE `avisos`
-  ADD PRIMARY KEY (`idaviso`),
-  ADD KEY `avisos_idcreador_IDX` (`idcreador`) USING BTREE;
+  ADD PRIMARY KEY (`id_aviso`),
+  ADD KEY `avisos_idcreador_IDX` (`id_creador`) USING BTREE;
 
 --
 -- Indices de la tabla `comentariosadopcion`
 --
-ALTER TABLE `comentariosadopcion`
-  ADD PRIMARY KEY (`idcometarioadopcion`),
-  ADD KEY `comentariosadopcion_fk` (`idadopciona`),
-  ADD KEY `comentariosadopcion_fk_1` (`idusuarioa`);
+ALTER TABLE `comentarios_adopcion`
+  ADD PRIMARY KEY (`id_cometario_adopcion`),
+  ADD KEY `comentariosadopcion_fk` (`id_adopciona`),
+  ADD KEY `comentariosadopcion_fk_1` (`id_usuarioa`);
 
 --
 -- Indices de la tabla `comentariosaviso`
 --
-ALTER TABLE `comentariosaviso`
-  ADD PRIMARY KEY (`idcomentarioaviso`),
-  ADD KEY `comentariosaviso_fk` (`idavisoc`),
-  ADD KEY `comentariosaviso_fk_1` (`idusuario`);
+ALTER TABLE `comentarios_aviso`
+  ADD PRIMARY KEY (`id_comentario_aviso`),
+  ADD KEY `comentariosaviso_fk` (`id_avisoc`),
+  ADD KEY `comentariosaviso_fk_1` (`id_usuario`);
 
 --
 -- Indices de la tabla `datosusuario`
 --
-ALTER TABLE `datosusuario`
-  ADD PRIMARY KEY (`iddatousuario`);
+ALTER TABLE `datos_usuario`
+  ADD PRIMARY KEY (`id_dato_usuario`);
 
 --
 -- Indices de la tabla `enadopcion`
 --
-ALTER TABLE `enadopcion`
-  ADD PRIMARY KEY (`idenadopcion`),
-  ADD KEY `enadopcion_idcreador_IDX` (`idcreador`) USING BTREE,
-  ADD KEY `enadopcion_fechacreacion_IDX` (`fechacreacion`) USING BTREE;
+ALTER TABLE `en_adopcion`
+  ADD PRIMARY KEY (`id_en_adopcion`),
+  ADD KEY `enadopcion_idcreador_IDX` (`id_creador`) USING BTREE,
+  ADD KEY `enadopcion_fechacreacion_IDX` (`fecha_creacion`) USING BTREE;
 
 --
 -- Indices de la tabla `solicitudadopcion`
 --
-ALTER TABLE `solicitudadopcion`
-  ADD PRIMARY KEY (`idadoptar`,`idsolicitante`);
+ALTER TABLE `solicitud_adopcion`
+  ADD PRIMARY KEY (`id_adoptar`,`id_solicitante`);
 
 --
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`idusuario`),
+  ADD PRIMARY KEY (`id_usuario`),
   ADD UNIQUE KEY `usuarios_correo_IDX` (`correo`) USING BTREE,
-  ADD KEY `usuarios_tipousuario_IDX` (`tipousuario`) USING BTREE;
+  ADD KEY `usuarios_tipousuario_IDX` (`tipo_usuario`) USING BTREE;
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -190,31 +189,31 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `avisos`
 --
 ALTER TABLE `avisos`
-  MODIFY `idaviso` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_aviso` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `comentariosadopcion`
 --
-ALTER TABLE `comentariosadopcion`
-  MODIFY `idcometarioadopcion` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `comentarios_adopcion`
+  MODIFY `id_cometario_adopcion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `comentariosaviso`
 --
-ALTER TABLE `comentariosaviso`
-  MODIFY `idcomentarioaviso` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `comentarios_aviso`
+  MODIFY `id_comentario_aviso` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `enadopcion`
 --
-ALTER TABLE `enadopcion`
-  MODIFY `idenadopcion` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `en_adopcion`
+  MODIFY `id_en_adopcion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -224,40 +223,40 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `avisos`
 --
 ALTER TABLE `avisos`
-  ADD CONSTRAINT `avisos_fk` FOREIGN KEY (`idcreador`) REFERENCES `usuarios` (`idusuario`);
+  ADD CONSTRAINT `avisos_fk` FOREIGN KEY (`id_creador`) REFERENCES `usuarios` (`id_usuario`);
 
 --
 -- Filtros para la tabla `comentariosadopcion`
 --
-ALTER TABLE `comentariosadopcion`
-  ADD CONSTRAINT `comentariosadopcion_fk` FOREIGN KEY (`idadopciona`) REFERENCES `enadopcion` (`idenadopcion`),
-  ADD CONSTRAINT `comentariosadopcion_fk_1` FOREIGN KEY (`idusuarioa`) REFERENCES `usuarios` (`idusuario`);
+ALTER TABLE `comentarios_adopcion`
+  ADD CONSTRAINT `comentariosadopcion_fk` FOREIGN KEY (`id_adopciona`) REFERENCES `en_adopcion` (`id_en_adopcion`),
+  ADD CONSTRAINT `comentariosadopcion_fk_1` FOREIGN KEY (`id_usuarioa`) REFERENCES `usuarios` (`id_usuario`);
 
 --
 -- Filtros para la tabla `comentariosaviso`
 --
-ALTER TABLE `comentariosaviso`
-  ADD CONSTRAINT `comentariosaviso_fk` FOREIGN KEY (`idavisoc`) REFERENCES `avisos` (`idaviso`),
-  ADD CONSTRAINT `comentariosaviso_fk_1` FOREIGN KEY (`idusuario`) REFERENCES `usuarios` (`idusuario`);
+ALTER TABLE `comentarios_aviso`
+  ADD CONSTRAINT `comentariosaviso_fk` FOREIGN KEY (`id_avisoc`) REFERENCES `avisos` (`id_aviso`),
+  ADD CONSTRAINT `comentariosaviso_fk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`);
 
 --
 -- Filtros para la tabla `datosusuario`
 --
-ALTER TABLE `datosusuario`
-  ADD CONSTRAINT `datosusuario_fk` FOREIGN KEY (`iddatousuario`) REFERENCES `usuarios` (`idusuario`);
+ALTER TABLE `datos_usuario`
+  ADD CONSTRAINT `datosusuario_fk` FOREIGN KEY (`id_dato_usuario`) REFERENCES `usuarios` (`id_usuario`);
 
 --
 -- Filtros para la tabla `enadopcion`
 --
-ALTER TABLE `enadopcion`
-  ADD CONSTRAINT `enadopcion_fk` FOREIGN KEY (`idcreador`) REFERENCES `usuarios` (`idusuario`);
+ALTER TABLE `en_adopcion`
+  ADD CONSTRAINT `enadopcion_fk` FOREIGN KEY (`id_creador`) REFERENCES `usuarios` (`id_usuario`);
 
 --
 -- Filtros para la tabla `solicitudadopcion`
 --
-ALTER TABLE `solicitudadopcion`
-  ADD CONSTRAINT `solicitudadopcion_fk` FOREIGN KEY (`idsolicitante`) REFERENCES `usuarios` (`idusuario`),
-  ADD CONSTRAINT `solicitudadopcion_fk_1` FOREIGN KEY (`idadoptar`) REFERENCES `enadopcion` (`idenadopcion`);
+ALTER TABLE `solicitud_adopcion`
+  ADD CONSTRAINT `solicitudadopcion_fk` FOREIGN KEY (`id_solicitante`) REFERENCES `usuarios` (`id_usuario`),
+  ADD CONSTRAINT `solicitudadopcion_fk_1` FOREIGN KEY (`id_adoptar`) REFERENCES `en_adopcion` (`id_en_adopcion`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

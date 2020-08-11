@@ -30,7 +30,7 @@ include 'conec.php';
             $mysqli = $mysqli->conexion();
             date_default_timezone_set('America/Bogota');
             $hoy = date("Y-m-d");
-            $query = "INSERT INTO usuarios (correo,clave,fechacreacion,tipousuario) VALUES ('".$correo."','".$clave."','".$hoy."',0);";
+            $query = "INSERT INTO usuarios (correo,clave,fecha_creacion,tipo_usuario) VALUES ('".$correo."','".$clave."','".$hoy."',0);";
             $res = $mysqli->query($query);
             if($res === FALSE){
                 echo "Error: ".$mysqli->error;
