@@ -4,8 +4,15 @@ además de tener un sistema de interacción de usuarios
 donde se puede realizar la publicación de mascotas perdidas
 ## Integrantes
 - Aquise Santos, Angela
+    -Modelo avisos y usuario
+    -Controlador avisos y registro
 - Chayña Batallanes , Josnick
+    -Modelo adopciones y usuario
+    -Controlador adopciones y login
 - Coayla Zuñiga, Gonzalo Eduardo
+    -Interfaces HTML
+    -Estilos CSS
+    -Archivos JavaScript
 ## Software necesario
 - XAMPP v3.2.4 (Servidor Apache y BD)
 ## Pasos de ejecución
@@ -188,3 +195,43 @@ En la clase adopcion_model tenemos:
     
 3. Entidades : Los modelos creados están caracterizados por tener una caracteristica de inmutabilidad dado que una vez instanciados no podrán sufrir alguna alteración duarante su uso debido a que solo esta especializado en brindar respuestas de la base de datos y no contienen alguna otra funcionalidad que altera su estructura original y es por esto que no son heredados de alguna clase padre o estas mismas generen alguna sub clase para una especialización necesaria durante el funcionamiento.
 4. Servicios : Los controladores son independientes cada uno del resto y brindan distintas respuestas en tiempos diferidos de consultas específicas , dadas estás condiciones son fácilmente intercambiables entre unos para brindar diferentes respuestas a las consultas realizadas por los modelos que lo soliciten.
+Estos son llamados por medio de AJAX desde el cliente como podemos ver:
+```
+$(document).ready(function() {
+    $('#form-login').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: 'php/controller/cont-login.php',
+            data: $(this).serialize(),
+            success: function(response)
+            {
+                $("#caja-alerta").html(response);
+                if($("#datos").attr("exito")==1){
+                    document.cookie = "idsesion="+$("#datos").attr("codigo");
+                   if($("#datos").attr("tipou")==0){
+                        $(location).attr('href','index.html');
+                    }else{
+                        $(location).attr('href','admin.html');
+                    }
+                }else{
+                    
+                }
+           }
+       });
+     });
+    $('#form-registro').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: 'php/controller/cont-reg.php',
+            data: $(this).serialize(),
+            success: function(response)
+            {
+                $("#caja-alerta").html(response);
+                alert("Exito");
+           }
+       });
+     });
+});
+```
