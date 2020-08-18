@@ -186,4 +186,45 @@ input{
     margin: 20px auto;
     border-top: 2px solid #FFB500;
 }
-
+.resulta{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #5E5E5E;;
+}
+.resulta-publi-sub{
+    width: 20%;
+}
+.resulta-imagen{
+    width: 10%;
+    margin: 10px 10% 10px 0;
+}
+.resulta-imagen-aviso{
+    width: 10%;
+    margin: 10px 5% 10px 0;
+}
+.resulta-elim{
+    width: 15%;
+    margin-left: 5%;
+    height: 20px;
+    background-color: red;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+.resulta-acti{
+    width: 15%;
+    margin-left: 5%;
+    height: 20px;
+    background-color: blue;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+.resulta-elim:hover{
+    cursor: pointer;
+}
+.resulta-aviso-sub{
+    width: 15%;
+}

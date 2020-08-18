@@ -22,10 +22,58 @@
         <section id="admin-contenido">
             <div id="publicaciones-admin" class="sub-cont">
                 <h2>Publicaciones</h2>
+                <div class="cont-box">
+                    <h3>Filtros</h3>
+                    <label for="activos">Activos: </label>
+                    <input type="checkbox" name="activos">
+                </div>
+                <div class="cont-box">
+                    <div class="resulta">
+                        <div class="resulta-publi-sub">ID CREADOR</div>
+                        <div class="resulta-publi-sub">IMAGEN</div>
+                        <div class="resulta-publi-sub">CREACIÓN</div>
+                        <div class="resulta-publi-sub">VIGENTE</div>
+                    </div>
+                    <div class="resulta">
+                        <div class="resulta-publi-sub">1</div>
+                        <div class="resulta-publi-sub resulta-imagen"><img src="images/adopcion/001.jpg"></div>
+                        <div class="resulta-publi-sub">27/07/2020</div>
+                        <div class="resulta-publi-sub">SI</div>
+                        <div class="resulta-elim" onclick="eliminar(1)">DESACTIVAR</div>
+                    </div>
+                    <div class="resulta">
+                        <div class="resulta-publi-sub">2</div>
+                        <div class="resulta-publi-sub resulta-imagen"><img src="images/adopcion/002.jpg"></div>
+                        <div class="resulta-publi-sub">29/07/2020</div>
+                        <div class="resulta-publi-sub">NO</div>
+                        <div class="resulta-acti" onclick="eliminar(2)">ACTIVAR</div>
+                    </div>
+                </div>
                 <div class="cont-box"></div>
             </div>
             <div id="avisos-admin" class="sub-cont">
                 <h2>Avisos</h2>
+                <div class="cont-box">
+                    <h3>Filtros</h3>
+                </div>
+                <div class="cont-box">
+                    <div class="resulta">
+                        <div class="resulta-aviso-sub">ID CREADOR</div>
+                        <div class="resulta-aviso-sub">TITULO</div>
+                        <div class="resulta-aviso-sub">MENSAJE</div>
+                        <div class="resulta-aviso-sub">IMAGEN</div>
+                        <div class="resulta-aviso-sub">VIGENTE</div>
+                    </div>
+                    <div class="resulta">
+                        <div class="resulta-aviso-sub">1</div>
+                        <div class="resulta-aviso-sub">Poodle perdido en av la marina</div>
+                        <div class="resulta-aviso-sub">Vestía un chaleco marrón</div>
+                        <div class="resulta-aviso-sub resulta-imagen-aviso"><img src="images/avisos/001.jpg"></div>
+                        <div class="resulta-aviso-sub">SI</div>
+                        <div class="resulta-elim" onclick="eliminar(1)">DESACTIVAR</div>
+                    </div>
+                </div>
+                <div class="cont-box"></div>
             </div>
         </section>
     </body>
